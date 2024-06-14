@@ -6,12 +6,6 @@ int index(string s, char c){
     return -1;
 }
 
-int solvexor(int known, int result, int n){
-    for (int i=0; i<n; i++){
-        if (i^known == result) return i;
-    }
-    return -1;
-}
 
 int main () {
     ios_base::sync_with_stdio(false);
@@ -35,7 +29,7 @@ int main () {
         for (int j=d-1; j>=0; j--){
             dp = index(S, C[j]);
             j1 = index(S, M[(j+1)%n]);
-            pp = solvexor(j1, dp, n);
+            pp = j1 ^ dp;
             cout << pp << '\t';
             M[j] = P[pp];
         }
