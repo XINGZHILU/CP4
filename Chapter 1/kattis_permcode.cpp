@@ -31,11 +31,12 @@ int main () {
         
         dp = index(S, C[d]);
         M[d] = P[dp];
-        cout << n << '\t' << d << '\t' << M[d] << '\t';
+        //cout << n << '\t' << d << '\t' << M[d] << '\t';
         for (int j=d-1; j>=0; j--){
             dp = index(S, C[j]);
             j1 = index(S, M[(j+1)%n]);
             pp = solvexor(j1, dp, n);
+            cout << pp << '\t';
             M[j] = P[pp];
         }
         for (int j=d+1; j<n; j++){
