@@ -38,6 +38,9 @@ int main () {
             pp = solvexor(j1, dp, n);
             M[j] = P[pp];
         }
+        for (int j=d+1; j<n; j++){
+            
+        }
         for (int j=0; j<=d; j++) cout << M[j];
         cout << '\n';
     }
